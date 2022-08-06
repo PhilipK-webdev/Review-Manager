@@ -10,16 +10,16 @@ function UserProvider({ children }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [charArray, setCharArray] = useState([]);
-  const [isIcon, setIsIcon] = useState(false);
+  const [isIcon, setIsIcon] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("/api/reviews");
       const data = await response.json();
       if (response.ok) {
-        console.log("data", data);
-        {
-          setData(data);
-        }
+        setData(data);
+        const boolenArray = Array(data.length).fill(false);
+        console.log("first", boolenArray);
+        setIsIcon(boolenArray);
       }
     };
     fetchData();

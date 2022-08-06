@@ -38,6 +38,7 @@ function CreateReview() {
       setData([...data, createObject]);
       setDescription("");
       setTitle("");
+      setCharArray([]);
     }
   };
   return (

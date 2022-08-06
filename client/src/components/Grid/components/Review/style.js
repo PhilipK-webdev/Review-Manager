@@ -87,6 +87,7 @@ const DeleteContainer = styled.div`
   width: 1vw;
   height: 2vh;
   margin-top: -2vh;
+  cursor: pointer;
 `;
 
 const Icon = styled.img`

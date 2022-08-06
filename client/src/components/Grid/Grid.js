@@ -13,7 +13,7 @@ function Grid() {
         <CreateReview />
         {data.length > 0
           ? data.map((item, index) => {
-              return <Review key={index} item={item} />;
+              return <Review key={index} item={item} index={index} />;
             })
           : null}
       </S.ReviewsContainer>

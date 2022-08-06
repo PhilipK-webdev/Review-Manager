@@ -38,7 +38,7 @@ const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px 20px 0px;
   gap: 40px;
   width: 23.5vw;
@@ -49,6 +49,7 @@ const MenuContainer = styled.div`
   order: 1;
   align-self: center;
   flex-grow: 0;
+  text-align: center;
 `;
 
 export default { Container, ReviewsContainer, MenuContainer };

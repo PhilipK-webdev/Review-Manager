@@ -15,6 +15,7 @@ function CreateReview() {
       setCharArray(value);
     } else {
       setCharArray([]);
+      setTitle("");
     }
   };
   const handleDecsription = (e) => {

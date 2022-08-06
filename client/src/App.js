@@ -1,8 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import { useEffect } from "react";
+import AppReview from "./pages/AppReview";
 function App() {
-  return <div className="App"></div>;
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/api/reviews");
+      const data = await response.json();
+      console.log("data", data);
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <div className="App">
+      <AppReview />
+    </div>
+  );
 }
 
 export default App;

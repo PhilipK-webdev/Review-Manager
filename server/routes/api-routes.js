@@ -18,12 +18,10 @@ router.post("/api/delete/:id", async (req, res) => {
 });
 
 router.post("/api/create", async (req, res) => {
+  const { insertReview } = req.body;
   const response = await mongoose.connection.db
     .collection("TeraGen")
-    .insertMany([
-      { title: "test1", description: "test1" },
-      { title: "test2", description: "test2" },
-    ]);
+    .insertMany(insertReview);
   res.json(response).status(200);
 });
 module.exports = router;

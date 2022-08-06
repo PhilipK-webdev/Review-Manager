@@ -2,21 +2,20 @@ import React from "react";
 import CreateReview from "./components/Review/CreateReview";
 import Review from "./components/Review/Review";
 import S from "./style";
+import { useRevewContext } from "../../hooks/useRevewContext";
 function Grid() {
+  const [getters, setters] = useRevewContext();
+  const { data } = getters;
   return (
     <S.Container>
       <S.MenuContainer></S.MenuContainer>
       <S.ReviewsContainer>
         <CreateReview />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
+        {data.length > 0
+          ? data.map((item, index) => {
+              return <Review key={index} item={item} />;
+            })
+          : null}
       </S.ReviewsContainer>
     </S.Container>
   );

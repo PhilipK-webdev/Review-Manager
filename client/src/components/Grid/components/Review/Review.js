@@ -1,10 +1,17 @@
 import React from "react";
 import S from "./style";
-function Review({ title, description }) {
+import icon from "../../../../assets/Delete.png";
+function Review({ item }) {
+  const { title, description } = item;
   return (
-    <S.Box>
-      <S.Title>sdasddassssssssssssssssssssssssssad</S.Title>
-      <S.Content>asdsdasdasdadasdsad</S.Content>
+    <S.Box onMouseEnter={() => console.log("IM HERE")}>
+      <S.BoxDiv>
+        <S.Title>{title}</S.Title>
+        <S.DeleteContainer>
+          <S.Icon src={icon} />
+        </S.DeleteContainer>
+      </S.BoxDiv>
+      <S.Content>{description}</S.Content>
     </S.Box>
   );
 }

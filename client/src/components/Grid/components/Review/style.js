@@ -44,10 +44,11 @@ const Box = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 2vh;
-  padding: 1vh 2vw 1vh 1vw;
+  padding: 1vh 0.5vw;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px 10px 10px 2px;
   margin-bottom: 1vh;
+  width: max-content;
 `;
 
 const Title = styled.div`
@@ -62,6 +63,7 @@ const Title = styled.div`
   flex: none;
   order: 0;
   flex-grow: 0;
+  margin-right: 5vw;
 `;
 const Content = styled.div`
   font-family: "Assistant";
@@ -76,4 +78,29 @@ const Content = styled.div`
   order: 1;
   flex-grow: 0;
 `;
-export default { Container, Span, Card, Box, Title, Content };
+const BoxDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+const DeleteContainer = styled.div`
+  width: 1vw;
+  height: 2vh;
+  margin-top: -2vh;
+`;
+
+const Icon = styled.img`
+  width: 1vw;
+  height: 2vh;
+`;
+export default {
+  Container,
+  Span,
+  Card,
+  Box,
+  Title,
+  Content,
+  DeleteContainer,
+  BoxDiv,
+  Icon,
+};

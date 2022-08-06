@@ -1,19 +1,12 @@
-import { useEffect } from "react";
 import AppReview from "./pages/AppReview";
+import UserProvider from "./hooks/useRevewContext";
 function App() {
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("/api/reviews");
-      const data = await response.json();
-      console.log("data", data);
-    };
-    fetchData();
-  }, []);
-
   return (
-    <div className="App">
-      <AppReview />
-    </div>
+    <UserProvider>
+      <div className="App">
+        <AppReview />
+      </div>
+    </UserProvider>
   );
 }
 
